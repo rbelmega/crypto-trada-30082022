@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/rbelmega/crypto-trada-30082022/compare/v1.0.1...v1.1.0) (2022-08-30)
+
+
+### Bug Fixes
+
+* **no-jira:** unit tests ([be21f6b](https://github.com/rbelmega/crypto-trada-30082022/commit/be21f6bec0bf93a1fc50fc15cc0fa10e4af1bad0))
+
+
+### Features
+
+* **no-jira:** application development ([7e497bb](https://github.com/rbelmega/crypto-trada-30082022/commit/7e497bbeff984428f560bed58caa2847284b19be))
+
 ## [1.0.1](https://github.com/rbelmega/crypto-trada-30082022/compare/v1.0.0...v1.0.1) (2022-08-30)
 
 
