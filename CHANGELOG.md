@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/rbelmega/crypto-trada-30082022/compare/v1.2.0...v1.3.0) (2022-09-06)
+
+
+### Features
+
+* **no-jira:** ws configuration ([7a168d9](https://github.com/rbelmega/crypto-trada-30082022/commit/7a168d946546cb9f82545de01191af37dd203a58))
+
 # [1.2.0](https://github.com/rbelmega/crypto-trada-30082022/compare/v1.1.0...v1.2.0) (2022-09-06)
 
 
