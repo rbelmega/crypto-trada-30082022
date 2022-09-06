@@ -25,7 +25,7 @@ jobs:
           env:
            NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-        - run: tar -xvzf crypto-trade-30082022-${{ github.event.inputs.tag }}.tgz
+        - run: tar -xvzf rbelmega-crypto-trade-30082022-${{ github.event.inputs.tag }}.tgz
 
         - name: Remove old file from S3
           uses: reggionick/s3-deploy@v3
