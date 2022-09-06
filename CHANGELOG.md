@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/rbelmega/crypto-trada-30082022/compare/v1.1.0...v1.2.0) (2022-09-06)
+
+
+### Features
+
+* **no-jira:** deploy to s3 ([53ef6f0](https://github.com/rbelmega/crypto-trada-30082022/commit/53ef6f0c7ca0a0c29e2307b09c21b30101672e83))
+* **no-jira:** deploy to s3 ([693b6d4](https://github.com/rbelmega/crypto-trada-30082022/commit/693b6d46438cd1d0e1d2bdf2bb8879baab326c65))
+
 # [1.1.0](https://github.com/rbelmega/crypto-trada-30082022/compare/v1.0.1...v1.1.0) (2022-08-30)
 
 
