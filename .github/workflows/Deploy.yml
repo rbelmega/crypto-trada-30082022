@@ -10,7 +10,10 @@ on:
 jobs:
  prepare:
      runs-on: ubuntu-latest
-     
+     env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
      steps:
         - name: Use Node.js
           uses: actions/setup-node@v3
@@ -21,3 +24,24 @@ jobs:
         - run: npm pack @rbelmega/crypto-trade-30082022@${{ github.event.inputs.tag }}
           env:
            NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        - run: tar -xvzf crypto-trade-30082022-${{ github.event.inputs.tag }}.tgz
+
+        - name: Remove old file from S3
+          uses: reggionick/s3-deploy@v3
+          with:
+            folder: package/static
+            bucket: ${{ secrets.S3_BUCKET }}
+            bucket-region: ${{ secrets.S3_BUCKET_REGION }}
+            delete-removed: true
+            private: true
+
+
+        - name: Deploy to S3
+          uses: reggionick/s3-deploy@v3
+          with:
+            folder: package
+            bucket: ${{ secrets.S3_BUCKET }}
+            bucket-region: ${{ secrets.S3_BUCKET_REGION }}
+            delete-removed: true
+            private: true
