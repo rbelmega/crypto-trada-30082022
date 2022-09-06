@@ -71,7 +71,7 @@ export default function DataTable() {
 
 	useEffect(() => {
 		const socket = new WebSocket(
-			'wss://demo.piesocket.com/v3/channel_1?api_key=VCXCEuvhGcBDP7XhiJJUDvR1e1D3eiVjgZ9VRiaV&notify_self'
+			'wss://5yuu8jgvn7.execute-api.us-east-1.amazonaws.com/Prod/'
 		);
 
 		setConnection(socket);
