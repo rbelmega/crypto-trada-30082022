@@ -1,0 +1,23 @@
+name: Deploy
+
+on:
+   workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to be deployed'
+        required: true
+
+jobs:
+ prepare:
+     runs-on: ubuntu-latest
+     
+     steps:
+        - name: Use Node.js
+          uses: actions/setup-node@v3
+          with:
+           always-auth: true
+           registry-url: https://npm.pkg.github.com
+       
+        - run: npm pack @rbelmega/crypto-trade-30082022@${{ github.event.inputs.tag }}
+          env:
+           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
